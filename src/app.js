@@ -10,12 +10,10 @@ const port = process.env.PORT || 3000;
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
-const partialsPath = path.join(__dirname, "../templates/partials");
 
 //Setup handlebars engine and views location
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
-hbs.registerPartials(partialsPath);
 
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
@@ -27,15 +25,15 @@ app.get("", (req, res) => {
   });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", {
+app.get("/about-me", (req, res) => {
+  res.render("about-me", {
     title: "About Me",
     name: "Anjana Dunukara",
   });
 });
 
-app.get("/help", (req, res) => {
-  res.render("help", {
+app.get("/about-weathercast", (req, res) => {
+  res.render("about-weathercast", {
     title: "Help",
     message: "This is Help Page",
     name: "Anjana Dunukara",
@@ -87,9 +85,9 @@ app.get("/products", (req, res) => {
   });
 });
 
-app.get("/help/*", (req, res) => {
+app.get("/about-weathercast/*", (req, res) => {
   res.render("404", {
-    errorMessage: "Help Article Not Found",
+    errorMessage: "404 Page Not Found",
     name: "Anjana Dunukara",
   });
 });
