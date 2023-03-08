@@ -1749,6 +1749,10 @@ textarea.w-select {
   margin-left: auto;
   margin-right: auto;
 }
+.w-nav-link:hover {
+  color: #0082f3;
+}
+
 .w-nav-link.w--current {
   color: #0082f3;
 }
@@ -1762,7 +1766,8 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #c8c8c8;
+  background: #111111;
+  opacity: 70%;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1806,9 +1811,10 @@ textarea.w-select {
   float: right;
   padding: 18px;
   font-size: 24px;
+  margin-top: 10px;
   display: none;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: #b9b1b1;
   tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1820,6 +1826,12 @@ textarea.w-select {
 }
 .w-nav-button.w--open {
   background-color: #c8c8c8;
+  opacity: 25%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-top: 10px;
   color: white;
 }
 .w-nav[data-collapse="all"] .w-nav-menu {
@@ -1946,9 +1958,9 @@ textarea.w-select {
         ========================================================================== */
 .navlink {
   padding-right: 38px;
-  padding-left: 38px;
+  padding-left: 0px;
   font-family: Montserrat, sans-serif;
-  color: #bbd8ec;
+  color: #b1a9a9;
   font-size: 0.8rem;
   line-height: 0.9rem;
 }
@@ -1960,14 +1972,18 @@ textarea.w-select {
 .navlink.firset {
   padding-left: 0px;
   font-family: Montserrat, sans-serif;
-  color: #bbd8ec;
+  color: #b1a9a9;
   font-size: 0.8rem;
   line-height: 1.025rem;
 }
 
+.navlink.firset:hover {
+  color: #0082f3;
+}
+
 .nav-menu {
-  margin-top: 11px;
-  color: #bbd8ec;
+  margin-top: 0px;
+  color: #181717;
 }
 
 .body {
